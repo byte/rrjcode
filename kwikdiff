@@ -1,0 +1,12 @@
+#!/bin/bash
+# from dave jones blog, march 15th 2005
+PWD=`pwd`
+TOP=`basename $PWD`
+EDITOR=vim
+if [ -f $1~ ]; then
+rm -f $1~
+fi
+cp $1 $1~
+$EDITOR $1
+cd ..
+diff -urNp $TOP/$1~ $TOP/$1 >>$TOP/current.diff

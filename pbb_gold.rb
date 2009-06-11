@@ -4,6 +4,7 @@
 # All I need is the date, the banks selling price, and the banks buying price
 # Its meant to help my gold investment
 # incidentally, the CSV file, is also useful for plotting, using tools like gnuplot
+# Also shows how to parse HTML in Ruby :-) (yes, I know you can use hpricot for this too)
 
 require 'net/http'
 require 'date'

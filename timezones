@@ -1,0 +1,16 @@
+#!/bin/sh
+format='+%a %b %e %X %z %Y %Z'
+echo -n "Local       "; date "$@" "$format"
+echo -n "Melbourne   "; TZ=Australia/Melbourne date "$@" "$format"
+echo -n "Malaysia    "; TZ=Asia/Kuala_Lumpur date "$@" "$format"
+echo -n "UTC         "; TZ=UTC date "$@" "$format"
+echo
+echo -n "Michigan    "; TZ=America/Detroit date "$@" "$format"
+echo -n "Hawaii      "; TZ=US/Hawaii date "$@" "$format"
+echo -n "Boston      "; TZ=America/New_York date "$@" "$format"
+echo -n "Los Angeles "; TZ=America/Los_Angeles date "$@" "$format"
+echo -n "Chicago     "; TZ=America/Chicago date "$@" "$format"
+echo -n "London      "; TZ=Europe/London date "$@" "$format"
+echo -n "Berlin      "; TZ=Europe/Berlin date "$@" "$format"
+echo -n "Paris       "; TZ=Europe/Paris date "$@" "$format"
+echo -n "Japan       "; TZ=Asia/Tokyo date "$@" "$format"
