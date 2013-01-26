@@ -8,8 +8,8 @@ use DBD::mysql;
 
 my $db=DBI->connect(
 	"DBI:mysql:database=mysql;host=localhost",
-	"root",
-	"soldapa9"
+	"username",
+	"password"
 ) || die "Error connection to database: $!";
 
 my $statement = $db->prepare("SELECT * from user");
